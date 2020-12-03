@@ -1,5 +1,7 @@
 package com.hz;
 
+import com.hz.cards.*;
+
 public class Main {
 
     // READ THE INSTRUCTIONS IN THIS METHOD, PLEASE!!!
@@ -8,21 +10,14 @@ public class Main {
         // Lets print some cards
         Printer printer = new Console();
 
-        // INSTRUCTIONS, READ CAREFULLY !!!!!!!!!!!!!!!!!!!!!!!!!!
-        // For a normal postcard use: true, false
-        // For a graduation card use: false, true
+        // Init instances of all card types
+        Card postCard = new PostCard(printer);
+        Card xMasCard = new XMasCard(printer);
+        Card highSchoolGraduationCard = new HighSchoolGraduationCard(printer);
 
-
-        // ONLY SET ONE OF THE BOOLEAN PARAMETERS TO TRUE!!!!
-        // DON'T FORGET THAT!
-
-        // WE NEED TO MAKE THIS MESSY CODE BETTER IMHO, MAYBE ONE OF THE SKILLED
-        // HBO-ICT STUDENTS CAN HELP US OUT.
-
-        // IF WE HAVE TO ADD AN OTHER TYPE OF CARD...
-        // ...I QUIT THIS JOB.
-        PostCard card = new PostCard(printer, false, true);
-
-        card.print();
+        // Print all types of cards
+        postCard.print();
+        xMasCard.print();
+        highSchoolGraduationCard.print();
     }
 }
